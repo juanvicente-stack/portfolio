@@ -1,0 +1,257 @@
+/* ---------------------------
+   Global
+---------------------------- */
+:root {
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Lexend", system-ui, sans-serif;
+
+  /* Light theme */
+  --clr-bg: #f8f9fb;
+  --clr-card: #ffffff;
+  --clr-text: #222;
+  --clr-text-muted: #666;
+  --clr-accent: #7c3aed;
+  --clr-accent-2: #06b6d4;
+  --clr-border: #e5e7eb;
+}
+
+html[data-theme="dark"] {
+  --clr-bg: #121212;
+  --clr-card: #1e1e1e;
+  --clr-text: #e5e7eb;
+  --clr-text-muted: #9ca3af;
+  --clr-border: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.5;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  margin: 0 0 0.4em;
+}
+
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+   Layout
+---------------------------- */
+.cv-wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 1100px;
+  margin: 30px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.profile-card {
+  background: var(--clr-card);
+  padding: 20px;
+  border-right: 1px solid var(--clr-border);
+}
+
+.main-card {
+  background: var(--clr-card);
+  padding: 24px 32px;
+}
+
+/* ---------------------------
+   Sidebar
+---------------------------- */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+}
+
+.section {
+  margin-top: 24px;
+}
+.section h3 {
+  font-size: 0.95rem;
+  color: var(--clr-accent);
+  margin-bottom: 8px;
+}
+
+.contact {
+  font-size: 0.85rem;
+}
+.contact a {
+  word-break: break-all;
+}
+
+.skills .skill {
+  margin-bottom: 10px;
+}
+.skills strong {
+  font-size: 0.85rem;
+}
+.skills .bar {
+  background: var(--clr-border);
+  height: 6px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.skills .bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent-2));
+  border-radius: 4px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-size: 0.75rem;
+  background: var(--clr-border);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* ---------------------------
+   Main
+---------------------------- */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-size: 1.4rem;
+}
+.lead {
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn--primary {
+  background: var(--clr-accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--clr-accent-2);
+}
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text);
+}
+.btn--ghost:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.section-title {
+  font-size: 1rem;
+  color: var(--clr-accent);
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.job {
+  margin-bottom: 16px;
+}
+.job h4 {
+  font-size: 0.95rem;
+}
+.job .meta {
+  font-size: 0.75rem;
+  color: var(--clr-text-muted);
+  margin-bottom: 4px;
+}
+.job p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ---------------------------
+   Top Controls
+---------------------------- */
+.mode-toggle {
+  text-align: right;
+  padding: 12px 20px;
+}
+.mode-btn {
+  background: transparent;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.mode-btn:hover {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+/* ---------------------------
+   Responsive
+---------------------------- */
+@media (max-width: 800px) {
+  .cv-wrap {
+    grid-template-columns: 1fr;
+  }
+  .profile-card {
+    border-right: none;
+    border-bottom: 1px solid var(--clr-border);
+  }
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* crops image nicely */
+  border-radius: 50%;  /* makes it a circle */
+}

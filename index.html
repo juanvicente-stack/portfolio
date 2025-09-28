@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MY PORTFOLIO</title
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Lexend:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet (separate file) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mode toggle (JS will update text & attribute on <html>) -->
+  <div class="mode-toggle" aria-hidden="false">
+    <button id="toggleMode" class="mode-btn" aria-pressed="false" title="Toggle dark / light mode">🌙 Dark Mode</button>
+  </div>
+
+  <div class="cv-wrap" role="main">
+    <!-- SIDEBAR -->
+    <aside class="profile-card" aria-label="Profile">
+      <div class="profile-head" style="display:flex;align-items:center;gap:14px">
+        <div class="avatar" aria-hidden="true">
+          <img src="y.jpg" alt="John Vincent Bugas">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" preserveAspectRatio="xMidYMid slice"> </dic>
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#7c3aed" />
+                <stop offset="1" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="16" fill="url(#g)" />
+            <g fill="rgba(255,255,255,0.95)">
+              <circle cx="50" cy="36" r="14" />
+              <rect x="24" y="62" width="52" height="14" rx="6" />
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="name">John Vincent Bugas</div>
+          <div class="title">Loss Prevention Validator</div>
+        </div>
+      </div>
+
+      <div class="section contact-section">
+        <h3>Contact</h3>
+        <div class="contact">
+          <div><strong>Email</strong><br><a href="mailto:you@example.com">janbugas@gmail.com></div>
+          <div><strong>Phone</strong><br><a href="tel:+639287705443">+63 928 770 5443</a></div>
+          <div><strong>Location</strong><br>General Santos City, Philippines</div>
+          <div style="margin-top:6px"><a class="pill" href="#" target="_blank" rel="noopener">Portfolio ↗</a></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Skills</h3>
+        <div class="skills">
+          <div class="skill">
+            <strong>HTML &amp; CSS</strong>
+            <div class="bar"><i style="width:92%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>JavaScript</strong>
+            <div class="bar"><i style="width:84%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>React / Next.js</strong>
+            <div class="bar"><i style="width:78%"></i></div>
+          </div>
+          <div class="skill">
+            <strong>UI / Product Design</strong>
+            <div class="bar"><i style="width:82%"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Languages</h3>
+        <div class="tags">
+          <span class="tag">English</span>
+          <span class="tag">Filipino</span>
+          <span class="tag">Maguindanaon</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Interests</h3>
+        <div class="muted">IoT • Decentralized Web • Pets tech • Teaching</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-card" aria-label="Resume content">
+      <div class="summary">
+        <div class="summary-left" style="flex:1">
+          <h1 class="headline">John Vincent Bugas </h1>
+          <p class="lead">I am an Information Technology student passionate about web development, networking, and innovative digital solutions. I enjoy learning new technologies and applying them through academic projects such as language learning apps and IoT prototypes. My goal is to gain practical experience, enhance my technical skills, and contribute to projects that create real-world impact.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn--primary" id="downloadPdf">Download PDF</button>
+          <a class="btn btn--ghost" href="mailto:you@example.com">Contact</a>
+        </div>
+      </div>
+
+      <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px">
+        <section>
+          <h3 class="section-title">Experience</h3>
+          <div class="timeline">
+            <article class="job">
+              <h4>Loss Prevention Validator</h4>
+              <div class="meta">August — Present • Panoptyc, Inc.</div>
+              <p>General administrative support: Handling various administrative tasks including mail and internal communication, theft board management, order fulfillment, ustomer support, and other operational duties.</p>
+            </article>
+
+            <article class="job">
+              <h4>Associate Theft Investigator</h4>
+              <div class="meta">Aug 2019 — Dec 2021 • Panoptyc, Inc.</div>
+              <p>Video investigation and analysis of incidents in self-service stores. eneral administrative tasks including but not limited to emailing and internal ommunication, management of theft board, fulfillment of orders, customer
+support, and other operational tasks.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="section-title">Education &amp; Certifications</h3>
+          <div class="edu">
+            <div class="job">
+              <h4>B.S. in Information Technology — Mindanao State University</h4>
+              <div class="meta">2018 — 2022</div>
+            </div>
+
+            <div class="job">
+              <h4>Certifications</h4>
+              <div class="meta">Google UX Design • AWS Cloud Practitioner</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="projects" style="margin-top:20px">
+        <h3 class="section-title">Projects</h3>
+        <div class="project-list">
+          <div class="job">
+            <h4>Revitalizing the Maguindanaon Language — Mobile App</h4>
+            <div class="meta">Lead Designer &amp; Developer</div>
+            <p>Designed and prototyped a mobile app to teach Maguindanaon using multimedia lessons and quizzes. Built using React Native and Firebase.</p>
+          </div>
+
+          <div class="job">
+            <h4>Smart Watch for Pets — PLTG Prototype</h4>
+            <div class="meta">Hardware + Embedded + Web Dashboard</div>
+            <p>Prototype firmware and cloud dashboard to monitor pet vitals and location, with notification rules and activity analytics.</p>
+          </div>
+        </div>
+      </div>
+
+        <div style="width:260px">
+          <h3 class="section-title">Keywords</h3>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">IoT</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Main script (separate file) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
